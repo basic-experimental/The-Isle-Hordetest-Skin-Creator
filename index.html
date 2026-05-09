@@ -82,11 +82,11 @@
 
             function update() {
                 const dino = dinoInput.value;
-                const maleDisplay = maleDisplayInput.value.slice(1);
-                const markings = markingsInput.value.slice(1);
-                const flank = flankInput.value.slice(1);
-                const body = bodyInput.value.slice(1);
-                const underbelly = underbellyInput.value.slice(1);
+                const maleDisplay = maleDisplayInput.value.slice(1).toUpperCase();
+                const markings = markingsInput.value.slice(1).toUpperCase();
+                const flank = flankInput.value.slice(1).toUpperCase();
+                const body = bodyInput.value.slice(1).toUpperCase();
+                const underbelly = underbellyInput.value.slice(1).toUpperCase();
                 code = `${dino}000${underbelly}FF${body}FF${flank}FF${markings}FF${maleDisplay}FF`;
                 output.value = code;
             }
