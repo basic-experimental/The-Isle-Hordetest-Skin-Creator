@@ -61,9 +61,9 @@
 
                 if (r < 0x1A) {
                     const bump = 0x1A - r;
-                    r += bump;
-                    g += bump;
-                    b += bump;
+                    r = Math.min(r + bump, 255);
+                    g = Math.min(g + bump, 255);
+                    b = Math.min(b + bump, 255);
                 }
 
                 return "#" + r.toString(16).padStart(2, '0') + 
