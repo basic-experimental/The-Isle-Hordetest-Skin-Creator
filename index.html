@@ -15,6 +15,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
         <title>Isle Hordetest Skin Creator</title>
         <meta charset="utf8">
         <style>
+            :root {
+                color-scheme: light dark;
+                --theme1: light-dark(#efefef, #404040);
+                --theme2: light-dark(#404040, #808080);
+            }
+
             body {
                 display: flex;
                 flex-direction: column;
@@ -35,7 +41,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             }
 
             #skinCreatorContainer {
-                border: solid 2px #efefef;
+                border: solid 2px var(--theme1);
                 border-radius: 10px;
                 padding: 25px;
                 margin-top: 10px;
@@ -64,8 +70,9 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                 height: 100%;
             }
 
-            input[type="color"], select {
-                background-color: #e9e9ed;
+            input[type="color"], select, button {
+                background-color: var(--theme1);
+                border: solid 1px var(--theme2);
                 border-radius: 5px;
                 border-width: 1px;
             }
@@ -76,7 +83,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
             }
 
             #output {
-                border: solid 1px black;
+                border: solid 1px var(--theme2);
                 display: inline-block;
                 margin-top: 0;
                 margin-right: 10px;
@@ -84,7 +91,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                 height: 100%;
                 vertical-align: top;
                 padding: 0 10px;
-                background-color: #efefef;
+                background-color: var(--theme1);
                 border-radius: 2px;
                 border-width: 1px;
                 line-height: 28px;
@@ -92,7 +99,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
             #copyButton {
                 height: 100%;
-                background-color: #efefef;
+                background-color: var(--theme1);
                 border-radius: 2px;
                 border-width: 1px;
             }
