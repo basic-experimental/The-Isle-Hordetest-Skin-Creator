@@ -971,6 +971,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                 }).catch((err) => {
                     copyButton.textContent = "Error!";
                     console.error(err);
+                    alert(err);
                 }).finally(() => {
                     copyTimeout = setTimeout(() => {
                         copyButton.textContent = "Copy";
@@ -1027,6 +1028,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                 clearTimeout(saveFileTimeout);
                 try {
                     if(isCodeError) throw new Error("Code is invalid");
+                    if(dinoInput.value == "") throw new Error("Select a species to export to a file");
                     const anchor = document.createElement("a");
                     anchor.href = createSaveFile();
                     anchor.download = "LocalSkins.sav";
@@ -1037,6 +1039,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
                 } catch(err) {
                     saveFileButton.textContent = "Error!";
                     console.error(err);
+                    alert(err);
                 } finally {
                     saveFileTimeout = setTimeout(() => {
                         saveFileButton.textContent = "Save File";
