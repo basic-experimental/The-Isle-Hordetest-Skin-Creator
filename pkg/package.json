@@ -1,0 +1,30 @@
+{
+  "name": "uesave_wasm",
+  "type": "module",
+  "collaborators": [
+    "trumank"
+  ],
+  "description": "Unreal Engine save file (GVAS) reading/writing",
+  "version": "0.7.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trumank/uesave"
+  },
+  "files": [
+    "uesave_wasm_bg.wasm",
+    "uesave_wasm.js",
+    "uesave_wasm.d.ts"
+  ],
+  "main": "uesave_wasm.js",
+  "homepage": "https://github.com/trumank/uesave",
+  "types": "uesave_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ],
+  "keywords": [
+    "unreal-engine",
+    "save",
+    "gvas"
+  ]
+}
